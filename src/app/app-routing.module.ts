@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { PokeapiComponent } from './pages/pokeapi/pokeapi.component';
 
+// Lazy Loading Implementation
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
   {
     path: 'api',
     loadChildren: () => import("./pages/pages.module").then(m => m.PagesModule)
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'api'
   }
 ];
 
