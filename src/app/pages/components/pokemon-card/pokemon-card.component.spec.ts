@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BadgeColorPipe } from '../../pipes/badge-color.pipe';
+import { testPokemon } from './pokemon';
 
 import { PokemonCardComponent } from './pokemon-card.component';
 
@@ -8,7 +10,7 @@ describe('PokemonCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PokemonCardComponent ]
+      declarations: [ PokemonCardComponent, BadgeColorPipe ]
     })
     .compileComponents();
   });
@@ -16,6 +18,7 @@ describe('PokemonCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PokemonCardComponent);
     component = fixture.componentInstance;
+    component.pokemon = testPokemon;
     fixture.detectChanges();
   });
 

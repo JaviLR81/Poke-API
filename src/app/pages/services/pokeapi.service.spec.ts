@@ -5,12 +5,14 @@ import { PokeapiService } from './pokeapi.service';
 describe('PokeapiService', () => {
   let service: PokeapiService;
 
+  let httpClientSpy: { get: jasmine.Spy };
+
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(PokeapiService);
+    httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+    service = new PokeapiService(httpClientSpy as any);
   });
 
-  it('should be created', () => {
+  it('PokeAPI SERVICE should be created', () => {
     expect(service).toBeTruthy();
   });
 });

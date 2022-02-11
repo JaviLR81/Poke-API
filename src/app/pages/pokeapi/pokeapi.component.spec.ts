@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokeapiComponent } from './pokeapi.component';
@@ -8,7 +9,8 @@ describe('PokeapiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PokeapiComponent ]
+      declarations: [ PokeapiComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });

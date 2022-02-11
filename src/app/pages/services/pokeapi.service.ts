@@ -22,6 +22,7 @@ export class PokeapiService {
     return this.http.get<Pokemon>(url);
   }
 
+  
   getPokemonMixedRequest(data: PokemonLink[]){
 
       const peticiones: Observable<Pokemon>[] = [];
