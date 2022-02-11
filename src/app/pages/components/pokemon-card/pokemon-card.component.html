@@ -4,10 +4,17 @@
     <img [src]="pokemon.sprites.other?.dream_world?.front_default" class="card-img-top" alt="...">
 
     <div class="card-body">
-      <h5 class="card-title"> {{ pokemon.name }} </h5>
+
+      <h5 class="card-title"
+        appTitleCard
+        size="30px"
+      >
+        {{ pokemon.name }}
+      </h5>
+
       <p class="card-text">
 
-        <span class="badge badge-success mr-1" *ngFor="let specie of pokemon.types" >
+        <span [ngClass]="i | badgeColor" *ngFor="let specie of pokemon.types; let i = index" >
             {{ specie.type.name }}
         </span>
 
