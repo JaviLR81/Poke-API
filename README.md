@@ -2,6 +2,8 @@
 
 _Este es un proyecto creado con el objetivo de repasar conceptos de Angular con el API de Pokemon, incluye temas como Lazy Loading, Pipes, Directives, Componentes y RXJS_
 
+(Demo) https://elastic-boyd-c2ae3f.netlify.app
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
