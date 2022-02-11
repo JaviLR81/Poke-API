@@ -15,7 +15,7 @@ export class PokeapiService {
   constructor(private http: HttpClient) { }
 
   getAllPokemon(): Observable<AllPokemon>{
-    return this.http.get<AllPokemon>(`${this._POKEMON_BASE_URL}/pokemon/?limit=2`);
+    return this.http.get<AllPokemon>(`${this._POKEMON_BASE_URL}/pokemon/?limit=150`);
   }
 
   getPokemon(url: string): Observable<Pokemon>{
